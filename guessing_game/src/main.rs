@@ -3,6 +3,8 @@
 use std::io;
 //From the rand library that we down load in the toml file, import Rng
 use rand::Rng;
+//From the cmp library in the std library, import Ordering
+use std::cmp::Ordering;
 
 //Main dec
 fn main() {
@@ -13,8 +15,10 @@ fn main() {
     //Creates immutable var with a random num between 1-101
     let secret_number = rand::thread_rng().gen_range(1,101);
     
+    //Normal printline, but includes formating to display the 'secret_number' var
     println!("The secret number is: {}", secret_number);
 
+    //Standard println - prints a string to CLI with a newline char
     println!("Please input your guess.");
 
     // Let declares a var
@@ -33,8 +37,25 @@ fn main() {
         //results from read_line are enums - either 'Ok' or 'Err'
         //if an 'Err', or error, is returned, the expected method is hit
         .expect("Failed to read line");
+    
+    //Trim() - gets rid of whitespace
+    //u32 seen here is an unsigned, 32-bit integer
+    //Parse makes it into a u32
+    //expect is error handling again
+    let guess: u32 = guess.trim().parse()
+        .expect("Please type a number!");
 
     //Normal printline, but includes formating to display the 'guess' var
     //'{}'s are placeholders that show that you wish to display a var that you passed in as an arg - you can do this with many values
     println!("You guessed: {}", guess);
+
+    //cmp method compares two things - here 'guess' is compared to 'secret_number'
+    //cmp returns and ordering enum
+    //A match statement, matches the return with one of the statements within it (similar to a switch statement), also known as arms
+    match guess.cmp(&secret_number){
+        //Ordering is an enum - with 'Less', 'Greater', and 'Equal'
+        Ordering::Less => println!("Too small"),
+        Ordering::Greater => println!("Too large"),
+        Ordering::Equal => println!("You win"),
+    }
 }
