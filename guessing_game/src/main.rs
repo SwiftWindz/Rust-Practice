@@ -44,7 +44,7 @@ fn main() {
         //u32 seen here is an unsigned, 32-bit integer
         //Parse makes it into a u32
         //expect is error handling again
-        let guess: num = match guess.trim().parse() {
+        let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
