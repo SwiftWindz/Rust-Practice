@@ -1,12 +1,20 @@
 // This is a use statement, works much like an import statement.
 // std is the standard library, io is the input/output library 
 use std::io;
+//From the rand library that we down load in the toml file, import Rng
+use rand::Rng;
 
 //Main dec
 fn main() {
     
     //Standard println - prints a string to CLI with a newline char
     println!("Guess the number!");
+
+    //Creates immutable var with a random num between 1-101
+    let secret_number = rand::thread_rng().gen_range(1,101);
+    
+    println!("The secret number is: {}", secret_number);
+
     println!("Please input your guess.");
 
     // Let declares a var
