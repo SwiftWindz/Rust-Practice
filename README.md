@@ -3,4 +3,4 @@
 
 Activities from:
   - The Rust Programming Language by Steve Klabnik and Carol Nichols
-  - Rust For Beginners Course by Jayson Lennon
+  - Rust Programming for Beginners Course by Jayson Lennon
