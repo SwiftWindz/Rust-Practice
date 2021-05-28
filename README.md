@@ -1,5 +1,5 @@
-# RustLearning
-🦀Rust Learning 
+# Learning Rust
+🦀Rust Practice 
 
 Activities from:
   - The Rust Programming Language by Steve Klabnik and Carol Nichols
