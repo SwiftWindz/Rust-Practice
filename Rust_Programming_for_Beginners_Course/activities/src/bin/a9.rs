@@ -14,7 +14,7 @@ fn create_coord(x: i32, y: i32) -> (i32, i32) {
 }
 
 fn main() {
-    let (x, y) = create_coord(1, 2);
+    let (_x, y) = create_coord(1, 2);
 
     if y > 5 {
         println!("Y is greater than 5");
