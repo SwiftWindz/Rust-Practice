@@ -10,4 +10,22 @@
 // * Use a match expression to determine which color
 //   name to print
 
-fn main() {}
+enum Colors {
+    Red,
+    Blue,
+    Yellow,
+}
+
+fn print_color(color: Colors){
+    match color {
+        Colors::Red => println!("The color is red"),
+        Colors::Blue => println!("The color is blue"),
+        Colors::Yellow => println!("The color is yellow"),
+    }
+}
+
+fn main() {
+    print_color(Colors::Blue);
+    print_color(Colors::Yellow);
+    print_color(Colors::Red);
+}
