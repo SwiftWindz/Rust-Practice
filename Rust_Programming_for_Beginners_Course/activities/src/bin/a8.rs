@@ -9,17 +9,20 @@
 // * Use a function to print out the drink flavor and ounces
 // * Use a match expression to print the drink flavor
 
+//Flavors for a drink
 enum Flavor {
     Cola,
     Grape,
     Orange,
 }
 
+//The struct of a drink
 struct Drink {
     fluid_ounces: f64,
     flavor: Flavor
 }
 
+//Prints the data contained in a Drink struct
 fn print_drink(drink: Drink){
     let flavor;
     let ounces = drink.fluid_ounces;
