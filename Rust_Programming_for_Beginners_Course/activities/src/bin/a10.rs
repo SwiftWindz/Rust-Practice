@@ -21,11 +21,7 @@ fn prt_result(print: bool){
 
 fn main() {
     let foo = 101;
-    let bar = if foo > 100 {
-        true
-    } else {
-        false
-    };
+    let bar = foo > 100;
 
     prt_result(bar);
 }
