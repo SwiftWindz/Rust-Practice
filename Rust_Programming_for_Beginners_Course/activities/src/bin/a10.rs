@@ -12,4 +12,20 @@
 // * Use a match expression to determine which message
 //   to print
 
-fn main() {}
+fn prt_result(print: bool){
+    match print {
+        true => println!("It's big"),
+        false => println!("It's small"),
+    }
+}
+
+fn main() {
+    let foo = 101;
+    let bar = if foo > 100 {
+        true
+    } else {
+        false
+    };
+
+    prt_result(bar);
+}
