@@ -22,7 +22,6 @@ fn var_message(foo: bool){
 
 }
 
-
 fn main() {
     let num = 111;
     let result;
